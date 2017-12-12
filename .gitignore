@@ -1,0 +1,15 @@
+.gradle/
+bin/
+build/
+target/
+*.log
+out
+
+#IntelliJ
+.idea
+*.iml
+
+#Eclipse
+.classpath
+.project
+.settings
