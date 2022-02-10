@@ -30,7 +30,7 @@
 
     </dependencies>
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13</junit.version>
         <assertj-core.version>3.8.0</assertj-core.version>
         <mockito-core.version>2.13.0</mockito-core.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
