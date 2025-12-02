@@ -8,12 +8,22 @@
     <artifactId>coding-kata</artifactId>
     <version>0.1-SNAPSHOT</version>
 
+    <properties>
+        <assertj-core.version>3.27.6</assertj-core.version>
+        <mockito-core.version>5.20.0</mockito-core.version>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit-jupiter.version>5.11.0</junit-jupiter.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -29,16 +39,15 @@
         </dependency>
 
     </dependencies>
-    <properties>
-        <junit.version>4.13.2</junit.version>
-        <assertj-core.version>3.27.6</assertj-core.version>
-        <mockito-core.version>5.20.0</mockito-core.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -49,6 +58,11 @@
                         <source>1.8</source>
                         <target>1.8</target>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
                 </plugin>
             </plugins>
         </pluginManagement>
